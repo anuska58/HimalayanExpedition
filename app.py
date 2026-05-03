@@ -656,5 +656,7 @@ def update_detail(active_chart, seasons, year_range, peak_filter):
     return breadcrumb, kpis, chart_section, description
 
 
+server = app.server
+
 if __name__ == "__main__":
     app.run(debug=True)
