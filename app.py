@@ -1422,7 +1422,7 @@ app.layout = html.Div(
                             },
                         ),
                         html.P(
-                            "1905 to 2024 · 11,000+ expeditions · The Himalayan Database",
+                            "1905 to 2024 · 11,000+ expeditions · The Himalayan Database · Anuska Acharya",
                             style={
                                 "fontSize": "14px",
                                 "color": TEXT_TER,
