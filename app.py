@@ -6,6 +6,7 @@ from dash import Dash, dcc, html, Input, Output, State, ctx
 
 
 URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRhwhH25KVPdQAPyBplWFgv5W9KKvLxvu-vY33e7tKFAc3YDYEfCPxzvh0LXxJQFPxhfCDGo6Iqbu_n/pub?gid=1676311418&single=true&output=csv"
+VIDEO_URL = "https://indiana-my.sharepoint.com/:v:/g/personal/anuacha_iu_edu/IQABxSkmgTDBRpdGXvsxZKZSAf3B6xJLq4bQHNad7-3Q4y0?e=3xU7ms" 
 
 df = pd.read_csv(URL)
 df.columns = df.columns.str.strip()
@@ -1422,7 +1423,7 @@ app.layout = html.Div(
                             },
                         ),
                         html.P(
-                            "1905 to 2024 · 11,000+ expeditions · The Himalayan Database · Anuska Acharya",
+                            "1950 to 2024 · 11,000+ expeditions · The Himalayan Database · Anuska Acharya",
                             style={
                                 "fontSize": "14px",
                                 "color": TEXT_TER,
@@ -1630,6 +1631,63 @@ app.layout = html.Div(
                         "padding": "20px 24px",
                     },
                 ),
+                html.Div(
+    [
+        html.Div(
+            [
+                html.Span(
+                    "Video Presentation",
+                    style={
+                        "fontSize": "11px",
+                        "fontWeight": "700",
+                        "letterSpacing": "0.1em",
+                        "textTransform": "uppercase",
+                        "color": TEXT_SEC,
+                    },
+                ),
+            ],
+            style={
+                "marginBottom": "14px",
+                "paddingBottom": "12px",
+                "borderBottom": f"1px solid {BORDER}",
+            },
+        ),
+
+                html.P(
+                    "Watch the recorded walkthrough for a guided explanation of the dashboard, design choices, and key insights.",
+                    style={
+                        "fontSize": "13px",
+                        "color": TEXT_SEC,
+                        "lineHeight": "1.6",
+                        "margin": "0 0 14px",
+                    },
+                ),
+
+                html.A(
+                    "Open Walkthrough Video",
+                    href=VIDEO_URL,
+                    target="_blank",
+                    style={
+                        "display": "inline-block",
+                        "fontSize": "12px",
+                        "fontWeight": "700",
+                        "color": "#FFFFFF",
+                        "background": "#5E3023",
+                        "padding": "9px 16px",
+                        "borderRadius": "6px",
+                        "textDecoration": "none",
+                        "letterSpacing": "0.03em",
+                    },
+                ),
+            ],
+            style={
+                "background": CARD_BG2,
+                "border": f"1px solid {BORDER}",
+                "borderRadius": "12px",
+                "padding": "20px 24px",
+                "marginTop": "18px",
+            },
+        ),
             ],
         ),
 
